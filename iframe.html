@@ -1,0 +1,54 @@
+<html>
+<body><font size="5px">
+<h1>Inline or Floating Frames with < iframe ></h1>
+There is another kind of frame known as an iframe (sometimes referred to as an inline frame or floating
+frame ), which can appear anywhere within a standard XHTML page; it does not need to appear either in
+a < frameset > element or even in a document that uses the frameset document type declaration.
+An iframe acts like a window cut into an XHTML page through which you can see another web page. You
+can specify the URL of the page to appear in the window, the width and height of the window, and
+whether or not it should have borders. Any text that surrounds the frame would flow around it in the same
+way text can flow around an image. You create an iframe with the < iframe > element, and you specify the
+URL of the page to appear in the iframe using the src attribute (just as you would with an image).
+The following is a simple example of a floating frame. If you look at the src attribute you can tell that
+the iframe embeds a Google map into the page, while the width and height attributes indicate the size
+of the iframe:<br>
+< html ><br>
+< head ><br>
+< title >iframe tag< /title ><br>
+< /head ><br>
+< body ><br>
+< h1 >iframe tag< /h1 ><br>
+< iframe src="https://www.wikipedia.org/" width="350" height="600"
+title="display wikipedia home page" ><br>
+< /iframe ><br>
+< iframe src="https://www.youtube.com/embed/5oH9Nr3bKfw" title="YouTube video"
+width="900" height="600" ><br>
+< /iframe ><br>
+< /iframe ><br>
+< /body ><br>
+< /html ><br><br>
+this will display the output as:-<br><br>
+<html>
+<head>
+<title>iframe tag</title>
+</head>
+<body>
+<h1>iframe tag</h1>
+<iframe src="https://www.wikipedia.org/" width="350" height="600"
+title="display wikipedia home page">
+</iframe>
+<iframe src="https://www.youtube.com/embed/5oH9Nr3bKfw" title="YouTube video"
+width="900" height="600">
+</iframe>
+</iframe>
+</body>
+</html>
+<br><br>
+When creating an iframe, you should use both an opening < iframe > tag and a closing < /iframe > (it
+should not be an empty element). Anything between these is shown only to those whose browsers do
+not support iframes (in this example you can see that a link to the map has been offered to users that do
+not see the iframe). If your iframe contained information that you would want a search engine to index,
+you could include the text that you want it to index in here.<br>
+</font>
+</body>
+</html>

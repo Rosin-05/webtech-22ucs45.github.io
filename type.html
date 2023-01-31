@@ -1,0 +1,95 @@
+<html>
+<body>
+<font size="5px">
+<h1>Typography</h1>
+While typesetting used to be the domain of skilled craftsmen, the desktop publishing revolution, which
+started 25 years ago, has led us to the point where anyone can create a document on a standard PC in the
+home. This was followed by the Internet revolution, which has removed the need to print many
+messages because they can be seen on a screen.<br><br>
+While technology has allowed anyone to create documents on a home PC, the skills and experience
+of the typesetters who knew how to make type attractive and easy to read were not built into the new
+technology. But we can learn a lot from the experience of these craftsmen. Studying even the basics of
+typography can have a big impact on the design of your pages, and also on how many (and which)
+of your precious words are read.<br><br>
+Typography can be defined as the art of arranging text so that it is carefully composed on the page to
+create a readable, coherent, and visually satisfying whole that works invisibly. This means putting a lot
+of care and attention into typesetting in order to make your message clearer and help the reader navigate
+around the page with ease, but doing so in a manner that does not call readers’ attention to what you are
+trying to do.<br><br>
+When you consider that web users commonly scan pages to find the information that they want, the
+value of good typography becomes even more apparent.<br><br>
+In this section, we will be looking at issues such as:
+<ol>
+<li>Line length</li>
+<li>Relationship between sizes of letters</li>
+<li>Gaps between lines</li>
+<li>Spaces between letters and words</li>
+<li>Careful chunking</li>
+<li>Contrast</li>
+</ol>
+<h1>Choice of fonts</h1>
+Before you look at these issues in detail, it is worth clarifying a couple of terms typographers use:
+<ol>
+<li>Legible: Text is legible if it is recognizable; for example, when a font gets too small it may no
+longer be legible.</li>
+<li>Readable: Text is readable if it is comfortable to read it for many minutes (without strain
+or difficulty).</li>
+</ol>
+A legible typeface can become unreadable through poor setting and placement, and a less legible
+typeface can be made more readable through good design.
+<h1>Line Length — A Measure</h1>
+A measure is the name typographers give to the number of characters in a single line of text.
+It is generally considered that for a body of text (such as a news article), the line length should be
+between 45 and 75 characters including letters, spacing, and punctuation. If you have a narrow column,
+your measure should be less — around 30 to 50 characters.<br><br>
+At the end of each line of text, readers have to make an effort to accurately find the beginning of the next
+line, and they have to do this before the flow of the reading is lost. If a line is too long, it can be harder
+for the reader to scan back to the left - hand side of the page. If there are two few characters, the reader
+has to move onto the next line more often, causing too many breaks in the reading.
+In a liquid layout you do not have control over the measure because users can increase and decrease the
+width of the writing as they change the size of the browser window. This is a key reason why text - heavy
+sites, such as news sites, often like to use fixed - width layouts.<br><br>
+With a fixed layout, you have greater ability to control the measure (although if the user changes the size
+of the font, it will affect the number of characters on each line). Figure 10 - 1 shows the BBC news site; as
+you can see, the main column (below the picture) has a measure of 45 – 75 words, and next to the picture
+and in the right - hand column the measure is less (30 – 50 characters).<br><br>
+<h1>Font Sizes</h1>
+You have probably come across the following series of typeface sizes in all kinds of programs, such as
+Word, Photoshop, or InDesign:<br>
+8pt 9pt 10pt 11pt 12pt 14pt 18pt 24pt 36pt 48pt 60pt 72pt<br><br>
+Such programs use the same sizes because they are set according to a scale or ratio, which was
+developed by European typographers in the sixteenth century.<br><br>
+Just as the shape of a rectangle based upon the golden ratio (with the square of its hypotenuse equal to
+the sum of its sides) looks pleasing to the eye, this scale of fonts works well and has changed little in the
+last 400 years.<br><br>
+Therefore, when you start designing pages, using these font sizes will help your pages look a lot
+more balanced.<br><br>
+You could choose settings in pixels that follow this scale of size, like so:<br><br>
+body {font-size: 12px;}<br>
+h1 {font-size: 24px;}<br>
+h2 {font-size: 18px;}<br>
+h3 {font-size: 16px;}<br>
+h4 {font-size: 14px;}<br>
+Unfortunately, specifying font sizes in pixels is not very good for accessibility because Internet Explorer
+does not allow users to resize text when its size is specified in pixels. Therefore, you should aim to create
+a similar effect using percentages or ems as a unit of measurement because they will allow all users to
+change the size of the text.<br><br>
+Fortunately, the default size of text in all browsers is 16 pixels, so we can work from this point to create
+the correct size using percentages like so:<br><br>
+body {font-size: 75%;} /* 16 x .075 = 12 */<br>
+h1 {font-size: 200%;} /* 12 x 2 = 24 */<br>
+h2 {font-size: 150%;} /* 12 x 1.5 = 18 */<br>
+h3 {font-size: 133%;} /* 12 x 1.333 = 16 */<br>
+h4 {font-size: 116%;} /* 12 x 1.16 = 14 */<br>
+You could also use ems. Ems allow you to change the size of text relative to the size of the text element ’ s
+parent element, so if the body of a web page is 16 pixels, to get a paragraph to render at 12px you use
+0.75em:<br><br>
+body {font-size: 100%;} /* ensure IE scales correctly */<br>
+p {font-size: 0.75em;} /* 16 x 0.75 = 12 */<br>
+h1 {font-size: 1.5em;} /* 16 x 1.5 = 24 */<br>
+h2 {font-size: 1.3em;} /* 16 x 1.125 = 18 */<br>
+h3 {font-size: 0.875em;} /* 16 x 0.875 = 14 */<br>
+You may have noticed in this example that there is a rule for the < body > element and the < p > element<br><br>
+</font>
+</body>
+</html>

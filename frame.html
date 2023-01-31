@@ -1,0 +1,32 @@
+<html>
+<body>
+<font size="5px">
+<h1>The < frameset > Element</h1>
+The < frameset > element replaces the < body > element in frameset documents. It is the attributes of the
+< frameset > element that specify how the browser window will be divided up into rows and columns.
+These attributes are as follows:
+<ol>
+<li>cols specifies how many columns are in the frameset.</li>
+<li>rows specifies how many rows are in the frameset.</li>
+</ol>
+The < frameset > element contains a < frame > element for each frame of the document (each cell of the
+grid constructed by the < frameset > element) and a < noframes > element to indicate what should be
+displayed if the user ’ s browser does not load frames.
+In addition to the rows and cols attributes, the frameset element can also take the following attributes:
+<br>class, id, onload, onunload, rows, style, title.
+<h1>The < frame > Element</h1>
+The < frame > element indicates what goes in each frame of the frameset. It is always an empty element,
+and therefore should not have any content, although each < frame > element should always carry one
+attribute, src , to indicate the page that should represent that frame.<br>
+The < frame > element can carry any of the universal attributes and the following attributes:
+frameborder, marginwidth, marginheight, noresize, scrolling, longdesc, src, name.<br>
+There are no CSS styles related to the < frame > element.
+<h1>The < noframes > Element</h1>
+If a user ’ s browser does not support frames (which is very rare these days), the contents of the
+< noframes > element should be displayed to the user.
+You should place a < body > element inside the < noframes > element because if a browser does not
+understand the < frameset > element, it should ignore the < frameset > element and the < noframes >
+element, then display what is inside the < body > element contained in the < noframes > element
+</font>
+</body>
+</html>

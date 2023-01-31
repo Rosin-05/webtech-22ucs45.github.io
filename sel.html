@@ -1,0 +1,86 @@
+<html>
+<body>
+<font size="5px">
+<h1>Text Pseudo - Classes</h1>
+While you are learning about text, there are two pseudo - classes that can help you work with text. These
+pseudo - classes allow you to render either the first letter or the first line of an element in a different way
+than the rest of that element.
+<h1>The first - letter Pseudo - Class</h1>
+The first - letter pseudo - class allows you to specify a rule just for the first letter of an element. This is
+most commonly used on the first character of a new page, either in some magazine articles or in books.
+Here is an example of the first - letter pseudo - class applied to a < p > element that has a class
+attribute whose value is introduction . Note how the selector for the element and the first - letter
+pseudo - class are separated by a colon:<br><br>
+p.introduction:first-letter {font-size:42px;<br><br>
+<h1>The first - line Pseudo - Class</h1>
+The first - line pseudo - class should allow you to render the first line of any paragraph differently
+from the rest of the paragraph. Commonly this might be in a bold font so that the reader can clearly see
+an introduction (for articles) or the first line (for poems).<br><br>
+The name of the pseudo - class is separated from the selector for the element by a colon:<br><br>
+p.introduction:first-line {font-weight:bold;}<br><br>
+<h1>Selectors</h1>
+So far, you have seen lots of examples of properties that affect the presentation of text, and you have seen
+how these properties are applied to elements using style rules. Before we continue to look at more
+properties, we need to look at some more fundamental issues. We will start by looking at how you can
+use different types of selector to specify which elements a style sheet rule will apply to before going on to
+look at the different units of measurements used in CSS.<br><br>
+You can specify which elements a style sheet rule applies to in several ways, not just by using the names
+of the elements as you have seen so far in this chapter (which is, incidentally, known as a simple selector ),
+or using the value of the class attribute or id attribute. Let ’ s take a look at the different types of selector
+that are available to specify which element(s) a CSS rule applies to.<br><br>
+<h1>Universal Selector</h1>
+The universal selector is an asterisk; it is like a wildcard and matches all element types in the document.
+<br><br>*{}
+If you want a rule to apply to all elements, you can use this selector. Sometimes it is used for default
+values that will apply to the whole of the document (such as a font - family and font - size ) unless
+another more specific selector indicates that an element should use different values for these same
+properties.
+It is slightly different from applying default styles to the < body > element, as the universal selector
+applies to every element and does not rely on the property being inherited from the rules that apply to
+the < body > element.
+<h1>The Type Selector</h1>
+The type selector matches all of the elements specified in the comma - delimited list. It allows you to apply
+the same rules to several elements. For example, if you wanted to apply the same rules to different sized
+heading elements, the following would match all h1 , h2 , and h3 elements:<br><br>
+h1, h2, h3 {}
+<h1>The Class Selector</h1>
+The class selector allows you to match a rule with an element (or elements) carrying a class attribute
+whose value matches the one you specify in the class selector. For example, imagine you had a < p >
+element with a class attribute whose value was BackgroundNote , like so:<br><br>
+< p class=”BackgroundNote” > This paragraph contains an aside. < /p >
+You can use a class selector in one of two ways here. One way is to simply assign a rule that applies to
+any element that has a class attribute whose value is BackgroundNote , like so, preceding the value of
+the class attribute with a period or full stop:<br><br>
+.BackgroundNote {}
+Or you can create a selector that selects only the < p > elements that carry a class attribute with a value
+of BackgroundNote (not other elements) like so:<br><br>
+p.BackgroundNote {}
+<h1>The ID Selector</h1>
+The id selector works just like a class selector, but works on the value of id attributes. Rather than using a
+period or full stop before the value of the id attribute, you use a hash or pound sign ( # ). So an element
+with an id attribute whose value is abstract can be identified with this selector.<br><br>
+#abstract
+Because the value of an id attribute should be unique within a document, this selector should apply
+only to the content of one element (and you should not have to specify the element name).
+<h1>The Child Selector</h1>
+The child selector matches an element that is a direct child of another. In this case it matches any
+< b > elements that are direct children of < td > elements. The names of the two elements are separated by a
+greater - than symbol to indicate that b is a child of td ( > ) which is referred to as a combinator :
+td > b {}
+This would enable you to specify a different style for < b > elements that are direct children of the < td >
+element compared with < b > elements that appear elsewhere in the document.
+As a direct child of the < td > element, no other tags would sit between the opening < td > tag and the
+< b > element. For example, the following selector does not make sense because the < b > element should
+not be a direct child of a < table > element (instead, a < tr > element is more likely to be the direct child of
+a < table > element):<br><br>
+table > b {}
+IE7 was the first version of Internet Explorer to support the child selector.
+<h1>The Descendant Selector</h1>
+The descendant selector matches an element type that is a descendant of another specified element (or
+nested inside another specified element), not just a direct child. While the greater - than symbol is the
+combinator for the child selector, for the descendent selector the combinator is the space. Take a look at
+this example:<br><br>
+table b {}
+</font>
+</body>
+</html>

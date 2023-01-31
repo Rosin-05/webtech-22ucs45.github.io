@@ -1,0 +1,64 @@
+<html>
+<body>
+<font size="5px">
+<h1>Cascading Style Sheets</h1>
+<h1>Introducing CSS</h1>
+CSS works by allowing you to associate rules with the elements that appear in a web page. These rules
+govern how the content of those elements should be rendered. Figure 7 - 1 shows you an example of a
+CSS rule, which is made up of two parts:
+<ol>
+<li>The selector , which indicates which element or elements the declaration applies to (if it applies to
+more than one element, you can have a comma - separated list of several elements)</li>
+<li>The declaration , which sets out how the elements referred to in the selector should be styled</li>
+</ol>
+The declaration is also split into two parts, separated by a colon:
+<ol>
+<li>A property , which is the property of the selected element(s) that you want to affect, in this case
+the width property.</li>
+<li>A value , which is a specification for this property; in this case it is that the table cells should be 36
+pixels wide.</li>
+</ol>
+lets look at the following example:-<br><br>
+< head ><br>
+< title > CSS Example < /title ><br>
+< link rel=”stylesheet” type=”text/css” href=”ch07_eg01.css” / ><br>
+< /head ><br>
+< body ><br>
+< h1 > Basic CSS Font Properties < /h1 ><br>
+< p > The following table shows you the basic CSS font properties that allow
+you to change the appearance of text in your documents. < /p ><br>
+< table ><br>
+< tr ><br>
+< th > Property < /th ><br>
+< th > Purpose < /th ><br>
+< /tr ><br>
+< tr ><br>
+< td class=”code” > font-family < /td ><br>
+< td > Specifies the font used. < /td ><br>
+< /tr ><br>
+< tr ><br>
+< td class=”code” > font-size < /td ><br>
+< td > Specifies the size of the font used. < /td ><br>
+< /tr ><br>
+< tr ><br>
+< td class=”code” > font-style < /td ><br>
+< td > Specifies whether the font should be normal, italic or oblique. < /td ><br>
+< /tr ><br>
+< tr ><br>
+< td class=”code” > font-weight < /td ><br>
+< td > Specifies whether the font should be normal, bold, bolder,
+or lighter < /td ><br>
+< /tr ><br>
+< /table ><br>
+< /body ><br>
+< /html ><br>
+Now let ’ s take a look at how to style this page:-<br><br>
+body {
+color: #000000;
+background-color:#ffffff;
+font-family:arial, verdana, sans-serif;
+}
+
+</font>
+</body>
+</html>

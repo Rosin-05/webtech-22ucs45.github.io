@@ -1,0 +1,52 @@
+<html>
+<body>
+<font size="5px">
+<h1>Form Controls</h1>
+You ’ ve met the < form > element, so this section goes on to cover the different types of form controls that
+live inside the < form > element to collect data from a visitor to your site. You will see:
+<br><br>
+<ol>
+<li>Text input controls</li>
+<li>Buttons</li>
+<li>Checkboxes and radio buttons</li>
+<li>Select boxes (sometimes referred to as drop - down menus and list boxes)</li>
+<li>File select boxes</li>
+<li>Hidden controls</li>
+<br><br>
+Single - Line Text Input Controls
+Single - line text input controls are created using an < input > element whose type attribute has a value of
+text . Here is a basic example of a single - line text input used for a search box :<br><br>
+< form action=”http://www.example.com/search.aspx” method=”get”
+name=”frmSearch” ><br>
+Search:<br>
+< input type=”text” name=”txtSearch” value=”Search for” size=”20”
+maxlength=”64” / ><br>
+< input type=”submit” value=”Submit” / ><br>
+< /form ><br>
+<h1>Radio Buttons</h1>
+Radio buttons are similar to checkboxes in that they can be either on or off, but there are two
+key differences:<br><br>
+<ol>
+<li>When you have a group of radio buttons that share the same name, only one of them can be
+selected. Once one radio button has been selected, if the user clicks another option, the new
+option is selected and the old one deselected.</li><br>
+<li>You should not use radio buttons for a single form control where the control indicates on or off,
+because once a lone radio button has been selected it cannot be deselected again (without
+writing a script to do that).</li>
+</ol><br><br>
+Therefore, a group of radio buttons are ideal if you want to provide users with a number of options from
+which they must pick only one. In such situations, an alternative is to use a drop - down select box that
+allows users to select only one option from several. Your decision between whether to use a select box or
+a group of radio buttons depends on three things:<br><br>
+<ol>
+<li>User expectations: If your form models a paper form where users would be presented with
+several checkboxes, from which they can pick only one, then you should use a group of
+radio buttons.</li><br>
+<li>Seeing all the options: If users would benefit from having all the options in front of them before
+they pick one, you should use a group of radio buttons.</li><br>
+<li>Space: If you are concerned about space, a drop - down select box will take up far less space than
+a set of radio buttons.</li><br>
+</ol>
+</font>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<html>
+<body>
+<font size="5px">
+<h1>Tables</h1>
+In the last chapter, you saw a couple of examples that use CSS with tables. Properties that are commonly
+used with the < table > , < td > , and < th > elements include the following:
+<ul type="square">
+<li>border to set the properties of the border of a table.</li>
+<li>padding to set the amount of space between the border of a table cell and its content — this
+property is very important to make tables easier to read.</li>
+<li>Properties to change text and fonts.</li>
+<li>text - align to align writing to the left, right, or center of a cell.</li>
+<li>vertical - align to align writing to the top, middle, or bottom of a cell.</li>
+<li>width to set the width of a table or cell.</li>
+<li>height to set the height of a cell (often used on a row as well).</li>
+<li>background - color to change the background color of a table or cell.</li>
+<li>background - image to add an image to the background of a table or cell.</li>
+</ul>
+<p><image src="photo13.png"></p>
+Now take a look at the style sheet for this table:<br><br>
+body {color:#000000; background-color:#ffffff;}<br>
+h1 {font-size:18pt;}<br>
+p {font-size:12pt;}<br>
+table {<br>
+background-color:#efefef;<br>
+width:350px;<br>
+border-style:solid;<br>
+border-width:1px;<br>
+border-color:#999999;<br>
+font-family:arial, verdana, sans-serif;}<br>
+caption {<br>
+font-weight:bold;<br>
+text-align:left;<br>
+border-style:solid; border-width:1px; border-color:#666666;<br>
+color:#666666;}<br>
+th {<br>
+height:50px;<br>
+font-weight:bold;<br>
+text-align:left;<br>
+background-color:#cccccc;}<br>
+td, th {padding:5px;}<br>
+td.code {<br>
+width:150px;<br>
+font-family:courier, courier-new, serif;<br>
+font-weight:bold;<br>
+text-align:right;<br>
+vertical-align:top;}<br><br>
+Here are some key points to note about this example. You will be altering settings of some of these
+properties using new properties that you will meet throughout this section.<br><br>
+<ul type="square">
+<li>The rule for the < table > element uses a width property to fix the width of the table to 350
+pixels; otherwise, it would take up as much of the screen as needed to show as much text as
+possible on one line.</li>
+<li>The rule for the < table > element also has a border property set, which creates a single-pixel
+border all around the table. Note, however, that none of the other cells in the table inherits this
+property.</li>
+<li>The rule that applies to the < caption > element has its font - weight , border , and text - align
+properties set. By default the text is normal (not bold), aligned in the center, and without
+a border.</li>
+<li>The rule that applies to the < th > element sets the height of the headings to 50 pixels, and the
+text is aligned left (rather than centered, which is the default).</li>
+There is a rule that applies to both the < th > and < td > elements, and this indicates that both
+should have a padding property set to 5px so that the content of the cells does not touch the
+border of those cells. Creating space around the cells is very important and makes the table
+more readable.</li>
+<li>The final rule states that the < td > elements whose class attribute has a value of code are given
+a width property whose value is 150px (150 pixels). This ensures that the content of this whole
+column remains on one line. Unfortunately, there is no way to assign a style to a column, but in
+the case of the width property, once it has been set on one element it does not need to be set on
+all the others in the column.</li>
+<li>You may also have noticed in Figure 8 - 13 that there is a white line around the two columns (which is
+particularly noticeable around table header cells). Browsers automatically add this to separate each cell
+from its neighbor. You can, however, remove this gap using a property called border - spacing , which
+you ’ ll learn about in the next section.</li>
+</ul>
+<h1>Table - Specific Properties</h1>
+In the following section you will meet five properties that can only be used with tables, and also some
+values for the border - style property that only apply to tables. Most of these properties were first
+supported in IE7 and FF2.
+<p><img src="photo14.png"></p>
+<h1>Outlines</h1>
+Outlines are similar to the borders that you met in the last chapter, but there are two crucial differences:<br><br>
+An outline does not take up space.<br>
+Outlines do not have to be rectangular.<br><br>
+The idea behind the outline properties is that you might want to highlight some aspect of a page for the
+user; this property will allow you to do that without affecting the flow of the page (where elements are
+positioned) in the way that a physical border would take up space. It ’ s almost as if the outline style sits
+on top of the page.<br><br>
+Unfortunately, the outline properties are not supported by Internet Explorer 8 (or earlier versions).
+They do work in other major browsers (although there can be some slight variations in appearance in
+different browsers).<br><br>
+The table that follows lists the four outline properties.
+<p><img src="photo15.png"></p>
+<h1>The outline - width Property</h1>
+The outline - width property specifies the width of the outline to be added to the box. Its value should
+be a length or one of the values thin , medium , or thick — just like the border - width attribute.<br><br>
+input {border-width:2px;}<br>
+<h1>The outline - style Property</h1>
+The outline - style property specifies the style for the line ( solid , dotted , or dashed ) that goes
+around the box. Its value should be one of the values used with the border - style property you learned
+about in Chapter 7. For example:<br><br>
+input {outline-style:solid;}<br>
+<h1>The outline - color Property</h1>
+The outline - color property allows you to specify the color of the outline. Its value should either be a
+color name, a hex color, or an RGB value, as with the color and border - color properties you learned
+about in Chapter 7. For example:<br><br>
+input {outline-color:#ffoooo;}<br>
+<h1>The outline Property (the Shorthand)</h1>
+The outline property is the shorthand that allows you to specify values for any of the three properties
+discussed previously in any order you like. The following example features a paragraph of text:
+<p>Inside this paragraph the word in <b>bold</b> is going to have an
+outline.</p><br><br>
+There is a rule that says the contents of the < b > element should have an 8-pixel dashed red border
+around the edge ( ch08_eg19.css ):<br><br>
+b {outline: #ff0000 8px dashed;}<br>
+</font>
+</body>
+</html>

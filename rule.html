@@ -1,0 +1,59 @@
+<html>
+<body>
+<font size="5px">
+<h1>Where You Can Add CSS Rules</h1>
+The example that you saw at the beginning of the chapter placed the CSS rules in a separate file known
+as an external style sheet . CSS rules can also appear in two places inside the XHTML document:
+<ol>
+<li>Inside a < style > element, which sits inside the < head > element of a document</li>
+<li>As a value of a style attribute on any element that can carry the style attribute</li>
+<li>as an internal style sheet</li>
+<li>as an external style sheet</li>
+</ol><br>
+When the style sheet rules are held inside a < style > element in the head of the document, they are
+referred to as an internal style sheet.<br><br>
+< head ><br>
+< title > Internal Style sheet < /title ><br>
+< style type=”text/css” ><br>
+body {<br>
+color:#000000;<br>
+background-color:#ffffff;<br>
+font-family:arial, verdana, sans-serif; }<br>
+h1 {font-size:18pt;}<br>
+p {font-size:12pt;}<br>
+< /style ><br>
+< /head ><br><br>
+When style attributes are used on XHTML elements, they are known as inline style rules . For example:<br><br>
+< td style=”font-family:courier; padding:5px; border-style:solid;
+border-width:1px; border-color:#000000;” ><br><br>
+<h1>Advantages of External CSS Style Sheets</h1>
+
+If two or more documents are going to use a style sheet, you should use an external style sheet. There are
+several reasons for this, including:
+<ol>
+<li>It saves you repeating the same style rules in each page.</li>
+<li>You can change the appearance of several pages by altering just the style sheet rather than each
+individual page. This means it is easier to update your site if you want to, for example, change
+the style of font used in all headings or alter the color of all links.</li>
+<li>Once a visitor to your site has downloaded the CSS style with the first page of your site that
+uses it, subsequent pages will be quicker to load (because the browser retains a copy of the CSS
+style sheet and the rules do not have to be downloaded for every page). This also puts less strain
+on the server (the computer that sends the web pages to the people viewing the site) because the
+pages it sends out are smaller.</li>
+<li>The style sheet can act as a style template to help different authors achieve the same style of
+document without learning all of the individual style settings.</li>
+<li>Because the web pages do not contain the style rules, different style sheets can be attached to the
+same document. So you can use the same XHTML document with one style sheet when the
+viewer is on a desktop computer, another style sheet when the user has a handheld device,
+another style sheet when the page is being printed, another style sheet when the page is being
+viewed on a TV, and so on. You can reuse the same document with different style sheets for
+different visitors ’ needs.</li>
+<li>A style sheet can import and use styles from other style sheets, allowing for modular
+development and good reuse. (For example, I have a style sheet that I import into other style
+sheets whenever I want to include examples of programming code in a web page — I do not need
+to write the style rules again and again.)</li>
+<li>If you remove the style sheet, you can make the site more accessible for those with visual
+impairments, because you are no longer controlling the fonts and color schemes.</li>
+</font>
+</body>
+</html>

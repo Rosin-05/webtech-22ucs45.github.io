@@ -1,0 +1,70 @@
+<html>
+<body><font size="5px">
+<h1>Lists</h1>
+There are many reasons you might want to add a list to your pages, from putting your five favorite
+albums on your homepage to including a numbered set of instructions for visitors to follow (like the
+steps you follow in the Try It Out examples in this page).
+You can create three types of lists in XHTML:
+<ul>
+<li>Unordered lists , which are like lists of bullet points</li>
+<li>Ordered lists , which use a sequence of numbers or letters instead of bullet points</li>
+<li>Definition lists , which allow you to specify a term and its definition</li>
+</ul>
+<h1>Using the < ul > Element to Create Unordered Lists</h1>
+If you want to make a list of bullet points, you write the list within the < ul > element (which stands for
+unordered list). Each bullet point or line you want to write should then be contained between opening
+< li > tags and closing < /li > tags (the li stands for list item ).
+You should always close the < li > element. Even though you might see some HTML pages that leave off
+the closing tag, this is a bad habit you should avoid.
+<h1>Ordered Lists</h1>
+Sometimes, you want your lists to be ordered. In an ordered list, rather than prefixing each point with a
+bullet point, you can use either numbers (1, 2, 3), letters (A, B, C), or Roman numerals (i, ii, iii) to prefix
+the list item.
+An ordered list is contained inside the < ol > element. Each item in the list should then be nested inside
+the < ol > element and contained between opening < li > and closing < /li > tags
+<h1>Definition Lists</h1>
+The definition list is a special kind of list for providing terms followed by a short text definition or
+description for them. Definition lists are contained inside the < dl > element. The < dl > element then
+contains alternating < dt > and < dd > elements. The content of the < dt > element is the term you will be
+defining. The < dd > element contains the definition of the previous < dt > element. For example, here is a
+definition list that describes the different types of lists in XHTML ( ch01_eg19.html ):
+< dl >
+< dt > Unordered List < /dt >
+< dd > A list of bullet points. < /dd >
+< dt > Ordered List < /dt >
+< dd > An ordered list of points, such as a numbered set of steps. < /dd >
+< dt > Definition List < /dt >
+< dd > A list of terms and definitions. < /dd >
+< /dl >
+let's look at the following example:-<br>
+< html ><br>
+< body ><br>
+< h1 >list tag< /h1 ><br>
+< h4 >different types of robot< /h4 ><br>
+< ol ><br>
+< li >industrial robot< /li ><br>
+< li >cobot< /li ><br>
+< li >humanoid robot< /li ><br>
+< li >autonomous robot< /li ><br>
+< /ol ><br>
+< hr color="purple" width="100%" ><br>
+< /body ><br>
+< /html ><br>
+will display output as:-
+<html>
+<body>
+<h1>list tag</h1>
+<h4>different types of robot</h4>
+<ol>
+<li>industrial robot</li>
+<li>cobot</li>
+<li>humanoid robot</li>
+<li>autonomous robot</li>
+</ol>
+<hr color="purple" width="100%">
+</body>
+</html><br>
+you can try other list by yourself!
+</font>
+</body>
+</html>

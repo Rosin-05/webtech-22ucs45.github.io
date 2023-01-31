@@ -1,0 +1,36 @@
+<html>
+<body><font size="5px">
+<h1>Grouping Elements with < div > and < span ></h1>
+The < div > and < span > elements allow you to group several elements to create sections or subsections of
+a page. On their own, they will not affect the appearance of a page, but they are commonly used with
+CSS to allow you to attach a style to a section of a page (as you will see in Chapter 7). For example, you
+might want to put all the footnotes on a page within a < div > element to indicate that all the elements
+within that < div > element relate to the footnotes. You might then attach a style to this < div > element so
+that the footnotes appear using a special set of style rules.<br><br>
+The < div > element is used to group block - level elements:<br>
+< div class=”footnotes” ><br>
+< h2 > Footnotes < /h2 ><br>
+< p > <b>1</b> The World Wide Web was invented by Tim Berners-Lee < /p ><br>
+< p > <b>2</b> The W3C is the World Wide Web Consortium which maintains many
+Web standards < /p ><br>
+< /div ><br>
+It is considered good practice to use a class attribute whose value describes the contents of this group
+of elements when using a < div > . As you can see here, the value footnotes helps describe the contents
+of the < div > .
+The < span > element, on the other hand, can be used to group inline elements only. So, if you had a part
+of a sentence or paragraph you wanted to group, you could use the < span > element. Here you can see
+that I have added a < span > element to indicate which content refers to an inventor. It contains both a
+bold element and some text:<br><br>
+< div class=”footnotes” ><br>
+< h2 > Footnotes < /h2 ><br>
+< p > < span class=”inventor” > < b > 1 < /b > The World Wide Web was invented by Tim
+Berners-Lee < /span > < /p ><br>
+< p > < b > 2 < /b > The W3C is the World Wide Web Consortium which maintains many Web
+standards < /p ><br>
+< /div ><br>
+<br>
+<br>
+you can try the examples by yourself!
+</font>
+</body>
+</html>

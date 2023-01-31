@@ -1,0 +1,68 @@
+<html>
+<body><font size="5px">
+<h1>Adding Images Using the < img > Element</h1>
+Images are added to a site using the < img > element, which has to carry at least two attributes: the
+src attribute, indicating the source of the image, and an alt attribute, which provides a
+description of the image.<br><br>
+For example, the following line would add the image called logo.gif into the page 
+ You can find this code at ch03_eg01.html .<br><br>
+< img src=”logo.gif” alt=”Wrox logo” / >
+In addition to carrying all the universal attributes and the UI event attributes (which you met in
+Chapter 1), the < img > element can carry the following attributes:<br><br>
+src, alt, align, border, height, width, hspace, vspace, ismap, usemap, longdesc, name.<br><br>
+<h1>The src Attribute</h1>
+The src attribute tells the browser where to find the image. The value is a URL and, just like the links
+you met in the last chapter, the URL can be an absolute URL or a relative URL.
+< img src=”logo.gif” / >
+<h1>The alt Attribute</h1>
+The alt attribute must appear on every < img > element and its value should be a text description of
+the image.<br><br>
+< img src=”logo.gif” alt=”Wrox logo” / ><br>
+Often referred to as alt text , it is important that the value of this attribute really describe the
+image because:<br>
+<ol>
+<li>If the browser cannot display the image, this text alternative will be shown instead.
+Web users with visual impairments often use software called a screen reader to read a page to
+them, in which case the alt text describes the image they cannot see.</li>
+<li>While search engines are very clever, they cannot yet describe or index the contents of an image;
+therefore, providing a text alternative helps search engines index your pages and helps visitors
+find your site.</li>
+<li>Sometimes images do not convey any information, and are only used to enhance the layout of the
+page. (For example, you might have an image that is just a decorative element but does not add any
+information to the page.)</li><br>
+In such a case, the alt attribute should still be used but given no value,
+as follows:<br><br>
+< img src=”stripy_page_divider.gif” alt=”” / ><br><br>
+<h1>Client - Side Image Maps</h1>
+Client - side image maps use XHTML code to tell the browser how the image will be divided up; then the
+browser can tell what part of the image someone clicks on and can send the user to the appropriate link.
+There are two methods to create a client - side image map:<br><br>
+<ol>
+<li>Using the < map > and < area > elements inside an < img > element</li>
+<li>Using the < map > element inside the < object > element</li>
+look at the following example:-<br><br>
+< h1 >image tag and mapping< /h1 ><br>
+< img src="computer.jpg" alt="computer" title="computer"/ >
+< map name="comp" >
+< area shape="rect" coords="351,249,164,113" href="two.html" title="click this link to go to the website called two" >
+< area shape="circle"coords="98,111,24" href="www.youtube.com" title="circle" ><br>
+< /area ><br>
+< /map ><br><br>
+this will show the output as:-<br>
+<html>
+<body>
+<h1>image tag</h1>
+<img src="computer.jpg" alt="computer" title="computer" usemap="#comp"/>
+<map name="comp">
+<area shape="rect" coords="351,249,164,113" href="two.html" title="click this link to go to the website called two">
+<area shape="circle"coords="98,111,24" href="www.youtube.com" title="circle">
+</area>
+</map>
+</body>
+</html>
+
+
+
+</font>
+</body>
+</html>

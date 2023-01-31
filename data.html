@@ -1,0 +1,242 @@
+<html>
+<body>
+<font size="5px">
+<h1>Sending Form Data to the Server</h1>
+When your browser requests a web page and when the server sends a page back to the browser, you use
+the Hypertext Transfer Protocol (HTTP).<br><br>
+There are two methods that a browser can use to send form data to the server — HTTP get and HTTP
+post — and you specify which should be used by adding the method attribute on the < form > element.
+If the < form > element does not carry a method attribute, then by default the get method will be
+used. If you are using a file upload form control, you must choose the post method (and you must set
+the enctype attribute to have a value of multipart/form - data ). Let ’ s take a closer look at each of
+these methods.<br><br>
+<h1>HTTP get</h1>
+When you send form data to the server using the HTTP get method, the form data is appended to the
+URL that is specified in the action attribute of the < form > element.<br><br>
+The form data is separated from the URL using a question mark. Following the question mark, you get
+the name/value pairs for each form control. Each name/value pair is separated by an ampersand ( & ).
+For example, take the following login form, which you saw when the password form control was
+introduced:<br><br>
+let us the following example:-<br><br>
+< form action=”http://www.example.com/login.aspx” method=”get” ><br>
+Username:<br>
+< input type=”text” name=”txtUsername” value=”” size=”20” maxlength=”20” > <br>
+Password:<br>
+< input type=”password” name=”pwdPassword” value=”” size=”20” maxlength=”20” ><br>
+< input type=”submit” / ><br>
+< /form ><br>
+<h1>HTTP post</h1>
+When you send data from a form to the server using the HTTP post method, the form data is sent
+transparently in what is known as the HTTP headers . While you do not see these headers, they are not,
+strictly speaking, secure on their own. If you are sending sensitive information such as credit card
+details, the data should be sent under a Secure Sockets Layer , or SSL , and they should be in encrypted.<br><br>
+let us look at the following example:-<br><br>
+< form action=”http://www.example.com/newsletter.asp?action=subscribe”
+method=”post” ><br><br>
+the following is the result of the attributes that we have learnt in the chapter:-<br><br>
+< html ><br>
+< head ><br>
+< title >form tag< /title ><br>
+< script ><br>
+function gold()<br>
+{<br>
+alert("your form has been submitted successfully");<br>
+}<br>
+< /script ><br>
+< /head ><br>
+< body ><br>
+< form onsubmit="gold()" ><br>
+< label >enter your first name< input type="name" value="enter your name"/ ><br>
+< /label ><br>
+< label >enter your last name< input type="name" value="enter your name"/ ><br>
+< /label ><br>
+< label >password<br>
+< input type="password" value="enter here"/ ><br>
+< /label ><br>
+< label >enter your age<br>
+< input type="number" ><br>
+< /label ><br>
+< label >date of birth<br>
+< input type="date" ><br>
+< /label ><br>
+< label >gender<br>
+< input type="radio" name="agree" value="yes" >male<br>
+< input type="radio" name="agree" value="no" >female<br>
+< /label ><br>
+select group<br>
+< select ><br>
+< option selected="selected" >select course< /option ><br>
+< option >B.Sc.,< /option ><br>
+< option >BBA< /option ><br>
+< option >B.E< /option ><br>
+< option >B.Tech< /option ><br>
+< option >BA< /option ><br>
+< /select ><br>
+select course<br>
+< select ><br>
+< optgroup ><br>
+< option disabled="disabled" >--enginerring--< /option ><br>
+< option >mech< /option ><br>
+< option >civil< /option ><br>
+< option >EEE< /option ><br>
+< option >ECE< /option ><br>
+<option>comp.sci</option ><br>
+< /optgroup ><br>
+< optgroup ><br>
+< option disabled="disabled" >--arts and science--< /option ><br>
+< option >computer science< /option ><br>
+< option >physics< /option ><br>
+< option >chemistry< /option ><br>
+< option >maths< /option ><br>
+< option >tamil< /option ><br>
+< option >english< /option ><br>
+< /optgroup ><br>
+< /select ><br>
+<br>
+< fieldset ><br>
+< legend >< em >contact details< /em >< /legend ><br>
+< label >mail-id<br>
+< input type="mailid"/ ><br>
+< /label ></br>
+< label >address<br>
+< textarea cols="20" rows="8" ><br>
+< /textarea >< /label ></br>
+< label >phone number<br>
+< input type="number"/ ><br>
+< /label ><br>
+< /fieldset ><br>
+<br>
+<br>
+< fieldset ><br>
+< legend >< em >parents details< /em >< /legend ><br>
+< label >father name<br>
+< input type="name"/ ><br>
+< /label ></br>
+< label >mother name<br>
+< input type="name"/ ><br>
+< /label ></br>
+< label >sibling's name<br>
+< input type="name"/ ><br>
+< /label ></br>
+< label >father name<br>
+< input type="name"/ ><br>
+< /label ></br>
+< label >father's occupation<br>
+< input type="text"/ ><br>
+< /label ></br><br>
+< label >mother's occupation<br>
+< input type="text"/ ><br>
+< /label ><br>
+< /fieldset ><br>
+< /select ><br>
+<br>
+< input type="submit"/ ><br>
+< /form ><br>
+< /body ><br>
+< /html ><br>
+<br><br>
+will display output as:-<br><br>
+<html>
+<head>
+<title>form tag</title>
+<script>
+function gold()
+{
+alert("your form has been submitted successfully");
+}
+</script>
+</head>
+<body>
+<form onsubmit="gold()">
+<label>enter your first name<input type="name" value="enter your name"/><br>
+</label>
+<label>enter your last name<input type="name" value="enter your name"/><br>
+</label>
+<label>password
+<input type="password" value="enter here"/>
+</label><br>
+<label>enter your age
+<input type="number">
+</label><br>
+<label>date of birth
+<input type="date">
+</label><br>
+<label>gender
+<input type="radio" name="agree" value="yes">male<br>
+<input type="radio" name="agree" value="no">female<br>
+</label><br>
+select group<br>
+<select>
+<option selected="selected">select course</option>
+<option>B.Sc.,</option>
+<option>BBA</option>
+<option>B.E</option>
+<option>B.Tech</option>
+<option>BA</option>
+</select><br>
+select course<br>
+<select>
+<optgroup>
+<option disabled="disabled">--enginerring--</option>
+<option>mech</option>
+<option>civil</option>
+<option>EEE</option>
+<option>ECE</option>
+<option>comp.sci</option>
+</optgroup>
+<optgroup>
+<option disabled="disabled">--arts and science--</option>
+<option>computer science</option>
+<option>physics</option>
+<option>chemistry</option>
+<option>maths</option>
+<option>tamil</option>
+<option>english</option>
+</optgroup><br>
+</select><br>
+<br>
+<fieldset>
+<legend><em>contact details</em></legend>
+<label>mail-id
+<input type="mailid"/>
+</label></br>
+<label>address
+<textarea cols="20" rows="8">
+</textarea></label></br>
+<label>phone number
+<input type="number"/>
+</label></br>
+</fieldset>
+<br>
+<br>
+<fieldset>
+<legend><em>parents details</em></legend>
+<label>father name
+<input type="name"/>
+</label></br>
+<label>mother name
+<input type="name"/>
+</label></br>
+<label>sibling's name
+<input type="name"/>
+</label></br>
+<label>father name
+<input type="name"/>
+</label></br>
+<label>father's occupation
+<input type="text"/>
+</label></br>
+<label>mother's occupation
+<input type="text"/>
+</label></br>
+</fieldset>
+</select><br>
+<br>
+<input type="submit"/>
+</form>
+</body>
+</html>
+
+</font>
+</body>
+</html>

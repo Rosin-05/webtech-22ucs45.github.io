@@ -1,0 +1,88 @@
+<html>
+<body>
+<font size="5px">
+<h1>Navigation</h1>
+A user will usually navigate your site in one of three ways:
+<ul type="square">
+<li>Using a menu that you provide</li>
+<li>Browsing through links provided in the middle of text and other parts of the page than
+the menu</li>
+<li>Searching for relevant items of information</li>
+</ul>
+In this section, you learn how to make it easier for users to get around your site using these three
+methods.<br>
+<h1>Menus</h1>
+A menu is a key part of any web site that features more than one page. It doesn ’ t just allow visitors to get
+where they want to go; a good menu also helps them to understand what your site is about and how it is
+organized.<br><br>
+As you saw in Chapter 9, a site may have more than one menu; it may have primary navigation,
+secondary navigation, and even tertiary navigation.
+Usually, the primary menu appears either across the top of a site from left to right, or down the left side
+of the page.<br><br>
+Where you have primary and secondary navigation, sometimes both will be across the top of the site, or
+both down the left-hand side. Other times you might find primary navigation across the top and
+secondary navigation down the left-hand side.<br><br>
+The menu tends to be the main way in which users will navigate between sections of a site, and good
+menu design makes a big difference in how long they will spend on your site and whether or not they
+achieve what they came to achieve.<br><br>
+In this section, I introduce eight guiding rules:
+<ol>
+<li>Menus should be concise.</li>
+<li>Menus should have clear labels.</li>
+<li>Menus should focus on what visitors want to achieve.</li>
+<li>Menus do not need to contain every link.
+<li>Menus should provide context.</li>
+<li>Menus should be interactive.</li>
+<li>Menus should be consistent.</li>
+<li>If you use icons, add the text, too.</li>
+</ol>
+<h1>CSS Sprites</h1>
+When creating graphical buttons, you will often want to use a second version of the image when a user
+hovers over it (known as a rollover state), to make it clear when someone is hovering over an image that
+can be clicked on.<br><br>
+Image rollovers were initially created using JavaScript to swap one image for another when the user
+hovers over it. Now, a much better technique is the use of CSS sprites . CSS sprites use one image to
+represent the different states of a button. When the page loads, one part of the image is shown to the user
+(the normal button style), then when the user hovers over the image, a different section of the image is
+shown (the rollover style).<br><br>
+Some CSS sprites take this even further and have one image that represents the different possible states
+that all the buttons on your site may have. We will take a look at our own example in a moment, but first,
+Figure 10 - 34 shows you examples of Google and Amazon ’ s sprites: single images that represent several
+parts of their interface.<br><br>
+Another advantage of using sprites is that the browser is requesting only one image from the server,
+rather than many, which reduces the overhead on the web server.<br><br>
+To see how this works,We will be using this image to create three separate
+buttons with different states when the user hovers over them
+Here is the HTML for this example ( ch10_eg13.html ):<br><br>
+This does not need to be an unordered list; it could be any kind of element. The key point is that we will
+be setting each element to be as big as the button we want to appear. We will then use the CSS sprite as a
+background image for these elements.<br>
+By positioning the background image accurately, we can ensure that it shows the right image. And when
+the user hovers over a link, we change the position of the background image so that it shows the same
+button ’ s rollover state.<br><br>
+< ul id=”navigation” ><br>
+< li > < a class=”buy” href=”/buy/” title=”Buy now” > Buy now < /a > < /li ><br>
+< li > < a class=”more” href=”/more/” title=”View more” > View more < /a ><br>
+< /li ><br>
+< li > < a class=”login” href=”/login/” title=”Login” > Login < /a > < /li ><br>
+< /ul ><br><br>
+in style sheet,<br><br>
+#navigation li {<br>
+list-style-type:none;<br>
+font-size:2em;}<br>
+#navigation li a {<br>
+background-image: url(“images/buttons.jpg”);<br>
+background-repeat:no-repeat;<br>
+display:block;<br>
+width:200px;<br>
+height:70px;<br>
+text-indent: -900%;}<br>
+#navigation li a.buy {background-position:0px 0px;}<br>
+#navigation li a:hover.buy {background-position:0px -70px;}<br>
+#navigation li a.more {background-position:0px -140px;}<br>
+#navigation li a:hover.more {background-position:0px -210px;}<br>
+#navigation li a.login {background-position:0px -280px;}<br>
+#navigation li a:hover.login {background-position:0px -350px;}<br>
+</font>
+</body>
+</html>

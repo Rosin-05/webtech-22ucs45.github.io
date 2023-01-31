@@ -1,0 +1,33 @@
+<html>
+<body>
+<font size="5px">
+<h1>Creating Links Between Frames</h1>
+One of the most popular uses of frames is to place navigation bars in one frame and then load the pages
+with the content into a separate frame. This is particularly helpful in three situations:
+<ol>
+<li>When your main document is very long and the navigation bar provides shortcuts to parts of
+the main document (acting like a table of contents that is always in view).</li>
+<li>When your navigation bar contains files that take a while to load (such as thumbnails of
+photographs in a gallery). By using frames, the user does not need to reload the navigation bar
+each time he or she views a new page.</li>
+<li>When you do not want to reload the whole page.</li>
+</ol><br>
+As you have already seen, each < frame > element can carry the name attribute to give each frame a name.
+This name is used in the links to indicate which frame the new page should load into. Consider this very
+simple example:<br><br>
+< frameset cols=”200, *” ><br>
+< frame src=”frames/linksNav.html” / ><br>
+< frame src=”frames/linksMain.html” name=”main_page” / ><br>
+< /frameset ><br><br>
+In order to specify that links should open up in the right - hand frame, the second < frame > element
+(which creates the right-hand frame) carries a name attribute whose value is main_page . The links in the
+navigation carry the target attribute whose value is set to main_page to indicate that the links should
+open in the < frame > element whose name attribute has a value of main_page . Here are the links in the
+linksNav.html file:<br><br>
+< a href=”http://www.wrox.com” target=”main_page” > Wrox Press < /a > <br> < br / >
+< a href=”http://www.google.com” target=”main_page” > Google < /a > <br> < br / >
+< a href=”http://www.microsoft.com” target=”main_page” > Microsoft < /a > <br> < br / >
+< a href=”http://news.bbc.co.uk/” target=”main_page” > BBC News < /a > <br> < br / >
+</font>
+</body>
+</html>

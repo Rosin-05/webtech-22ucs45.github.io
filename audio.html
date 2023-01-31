@@ -1,0 +1,42 @@
+<html>
+<body>
+<font size="5px">
+<h1>Adding Audio to Your Site</h1>
+As with videos, when you want to add audio to your site you need to consider:
+<ol>
+<li>File format : Different types of audio files are saved using different compression techniques,
+which can affect the quality of the recording and file size.</li>
+<li>Plug - in needed to play that type of file : As with video, visitors to your site need the right kind
+of player installed to play your chosen format.</li>
+</ol> 
+Luckily, there is a selection of file formats that
+you can play on most computers, so this is less of an issue than it is with video.
+The most popular file types are:
+<ol>
+<li>MP3 : This is like the sound part of the MPEG video format. MP3 is one of the most popular
+formats for music recordings, and combines good compression with fairly good quality. Files are
+stored with the .mp3 file extension and will play in most browsers. The MIME type for MP3s is
+audio/mpeg .</li>
+<li>WAVE: This format was developed by IBM and Microsoft, and again plays in most web
+browsers. WAVE files are stored with the .wav file extension. Typically, WAVE files are not
+compressed, so their quality is much better than MP3 (but users need good-quality speakers in
+order to hear the difference). The disadvantage with the uncompressed nature of the WAVE files
+is that the file sizes tend to be far larger than MP3s. The MIME type for WAVE files is
+audio/x - wav .</li>
+Three other formats that are used on the Web, all of which require their own plug - ins, are:<br><br>
+<ol>
+<li>Windows Media Audio , which requires the Windows Media plug - in</li>
+<li>QuickTime , which requires the QuickTime plug - in</li>
+<li>Real Audio , which requires the Real Media plug - in</li>
+</ol><br>
+Here is an example of adding an MP3 to a web page; note how the type attribute on the < object >
+element has the value audio/mpeg:<br><br>
+< object width=”300” height=”42” type=”audio/mpeg” data=”audio/my_music.mp3” ><br>
+< param name=”src” value=”audio/my_music.mp3” / ><br>
+< param name=”autoplay” value=”true” / ><br>
+< param name=”autostart” value=”1” / ><br>
+< embed src=”audio/my_music.mp3” width=”300” height=”42” > < /embed ><br>
+< /object ><br>
+</font>
+</body>
+</html>

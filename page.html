@@ -1,0 +1,74 @@
+<html>
+<body>
+<font size="5px">
+<h1>Creating a Form with the < form > Element</h1>
+As you have already seen, forms live inside an element called < form > . The < form > element can also
+contain other markup, such as paragraphs, headings, and so on, although it may not contain another
+< form > element.<br><br>
+Providing you keep your < form > elements separate from each other (and no < form > element contains
+another < form > element), your page may contain as many forms as you like. For example, you might
+have a login form, a search form, and a form to subscribe to a newsletter, all on the same page. If you
+do have more than one form on a page, users will be able to send the data from only one form at a time
+to the server.<br><br>
+Every < form > element should carry at least two attributes:<br><br>
+action method<br>
+A < form > element may also carry all of the universal attributes, the UI event attributes, and the
+following attributes:<br><br>
+enctype, accept, accept-charset, onsubmit, onreset.<br><br>
+<h1>The method Attribute</h1>
+Form data can be sent to the server in two ways, each corresponding to an HTTP method :
+The get method, which sends data as part of the URL
+The post method, which hides data in something known as the HTTP headers
+You learn more about these two methods later in the chapter, where you will learn what they mean and
+when you should use each one.
+<h1>The id Attribute</h1>
+The id attribute allows you to uniquely identify the < form > element within a page, just as you can use it
+to uniquely identify any element on a page.
+It is good practice to give every < form > element an id attribute, because many forms make use of style
+sheets and scripts, which may require the use of the id attribute to identify the form.
+The value of the id attribute should be unique within the document, and it should also follow the other
+rules for values of the id attribute mentioned in Chapter 1. Some people start the value of id and name
+attributes for forms with the characters frm and then use the rest of the value to describe the kind of data
+the form collects — for example, frmLogin or frmSearch .
+<h1>The name Attribute (Deprecated)</h1>
+As you have already seen through its use on other elements, the name attribute is the predecessor to the
+id attribute, and as with the id attribute, the value should be unique to the document.
+Generally, you will not need to use this attribute, but when you do use it you can give it the same value
+as the id attribute. You will often see the value of this attribute begin with the characters frm followed
+by the purpose of the form (such as frmLogin or frmSearch ).
+<h1>The onsubmit Attribute</h1>
+At some point, you have probably filled in a form on a web site, and then, as soon as you have clicked
+the button to send the form data (even before the page is sent to the server), been shown a message
+telling you that you have missed entering some data, or entered the wrong data. When this happens, the
+chances are you have come across a form that uses the onsubmit attribute to run a script in the browser
+that checks the data you entered before the form is sent to the server.
+<h1>The accept - charset Attribute</h1>
+Different languages are written in different character sets or groups of characters. However, when creating
+web sites, developers do not always build them to understand all different languages. The idea behind
+the accept - charset attribute is that it specifies a list of character encodings that a user may enter and
+that the server can then process. Values should be a space - separated or comma - delimited list of character
+sets<br><br>
+For example, the following indicates that a server accepts UTF - 8 encodings:
+accept-charset=”utf-8”
+<h1>The accept Attribute</h1>
+The accept attribute is similar to the accept - charset attribute except it takes a comma - separated list
+of content types (or file types) that the server processing the form can handle. Unfortunately, none of the
+main browsers supports this feature.
+The idea is that a user would not be able to upload a file of a different content type other than those
+listed. Here, you can see that the only types intended to be uploaded are images that are GIFs or JPEGs:
+accept=”image/gif, image/jpg”
+Since the main browsers currently ignore this attribute, if you were to use it visitors would still be able to
+upload any file.
+<h1>The target Attribute</h1>
+The target attribute is usually used with the < a > element to indicate which frame or browser window
+the link should be loaded into. It can also be used with a form to indicate which frame or window the
+form results open in when the user has submitted a form (frames are covered in the next chapter).
+<h1>White Space and the < form > Element</h1>
+You should also be aware that when a browser comes across a < form > element it often creates extra
+white space around that element. This can particularly affect your design if you want a form to fit in
+a small area, such as putting a search form in a menu bar. If CSS will not cure this problem in the
+browsers you are targeting, the only way to avoid the problem is through careful placement of
+the < form > element.
+</font>
+</body>
+</html>
